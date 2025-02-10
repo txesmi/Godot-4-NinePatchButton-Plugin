@@ -1,0 +1,159 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjd1p2vxmbmty"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_djm3y"]
+[ext_resource type="Script" path="res://addons/nine_patch_button/nine_patch_button.gd" id="2_ojvib"]
+[ext_resource type="Texture2D" uid="uid://ds4l6cas34j75" path="res://art/dotted_frames.png" id="3_pol8b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1mn0"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 3
+shadow_offset = Vector2(0, 1)
+anti_aliasing = false
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_djm3y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 7
+theme_override_constants/v_separation = 7
+columns = 2
+
+[node name="NinePatchButton1" type="Button" parent="MarginContainer/GridContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0.299547, 0.299547, 0.299547, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_w1mn0")
+text = "click here"
+flat = true
+clip_text = true
+script = ExtResource("2_ojvib")
+texture = ExtResource("3_pol8b")
+region_normal = Rect2(0, 0, 8, 8)
+region_pressed = Rect2(0, 8, 8, 8)
+region_hover = Rect2(8, 0, 8, 8)
+region_disabled = Rect2(8, 8, 8, 8)
+margin_left = 3
+margin_top = 3
+margin_right = 3
+margin_bottom = 3
+
+[node name="NinePatchButton2" type="Button" parent="MarginContainer/GridContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0.299547, 0.299547, 0.299547, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_w1mn0")
+text = "click here
+"
+flat = true
+clip_text = true
+script = ExtResource("2_ojvib")
+texture = ExtResource("3_pol8b")
+region_normal = Rect2(0, 0, 8, 8)
+region_pressed = Rect2(0, 8, 8, 8)
+region_hover = Rect2(8, 0, 8, 8)
+region_disabled = Rect2(8, 8, 8, 8)
+margin_left = 2
+margin_top = 2
+margin_right = 2
+margin_bottom = 2
+horizontal_stretch = 1
+
+[node name="NinePatchButton3" type="Button" parent="MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0.299547, 0.299547, 0.299547, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_w1mn0")
+text = "click here"
+flat = true
+clip_text = true
+script = ExtResource("2_ojvib")
+texture = ExtResource("3_pol8b")
+region_normal = Rect2(0, 0, 8, 8)
+region_pressed = Rect2(0, 8, 8, 8)
+region_hover = Rect2(8, 0, 8, 8)
+region_disabled = Rect2(8, 8, 8, 8)
+margin_left = 2
+margin_top = 2
+margin_right = 2
+margin_bottom = 2
+horizontal_stretch = 1
+vertical_stretch = 1
+
+[node name="NinePatchButton4" type="Button" parent="MarginContainer/GridContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_disabled_color = Color(0.299547, 0.299547, 0.299547, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.8, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_w1mn0")
+text = "click here
+"
+flat = true
+clip_text = true
+script = ExtResource("2_ojvib")
+texture = ExtResource("3_pol8b")
+region_normal = Rect2(0, 0, 8, 8)
+region_pressed = Rect2(0, 8, 8, 8)
+region_hover = Rect2(8, 0, 8, 8)
+region_disabled = Rect2(8, 8, 8, 8)
+margin_left = 2
+margin_top = 2
+margin_right = 2
+margin_bottom = 2
+horizontal_stretch = 1
