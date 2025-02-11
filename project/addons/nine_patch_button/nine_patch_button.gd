@@ -205,7 +205,9 @@ func _ready():
 	nine_patch_rect.texture = texture
 	nine_patch_rect.draw_center = draw_center
 	
-	if toggle_mode and button_pressed:
+	if disabled:
+		nine_patch_rect.region_rect = region_disabled
+	elif toggle_mode and button_pressed:
 		nine_patch_rect.region_rect = region_pressed
 	else:
 		nine_patch_rect.region_rect = region_normal
